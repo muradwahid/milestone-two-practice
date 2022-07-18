@@ -1,0 +1,214 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Poppins:wght@400;500&display=swap');
+/* common style  or utilities*/
+body{
+    background: #F3F1FF;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    width: 870px;
+    background-color: #fff;
+    padding: 33px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+hr{
+    background-color: #D1D1D1;
+    margin-bottom: 22px;
+}
+/* logo and menu */
+header{
+    background-color: #562EFF;
+}
+.main-menu{
+    margin: 0 auto;
+    width: 68vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    column-gap: 10px;
+}
+.logo>img{
+    width: 41px;
+    height: 51px;
+}
+.logo>h3{
+    letter-spacing: 2px;
+    color: whitesmoke;
+}
+.togle-bar .fa-bars{
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+.menu .sub-menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    color: whitesmoke;
+}
+.menu .sub-menu>li{
+    cursor:pointer;
+}
+/* top .player  style*/
+.top-players{
+    margin-bottom: 30px;
+}
+.section-title{
+    font-family: 'Poppins';
+    color: #562EFF;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 0px;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 30px;
+
+}
+.player{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+.player img{
+    height: 56px;
+    width: 56px;
+}
+.player-name{
+    margin-left: 16px;
+    font-size: 18px;
+}
+/* top blog styles */
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 26px;
+    column-gap: 80px;
+}
+.blog{
+    display: flex;
+    gap: 16px;
+}
+.blog .thumbnail img{
+    width: 177px;
+    height: 117px;
+}
+.blog-info .blog-title{
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: 0px;
+}
+.blog-info .blog-author{
+    font-size: 16px;
+    color: #9F9F9F;
+}
+.blog-info .blog-author a{
+    text-decoration: none;
+    color: #562EFF;
+}
+/* latest course */
+.courses{
+    display: flex;
+    column-gap: 30px;
+}
+.course{
+    padding: 20px;
+    box-shadow: 3px 1px 8px #dddddd;
+    border-radius: 5px;
+    width: 250px;
+    height: 265px;
+}
+.course-banner img{
+    Width:224px;
+    Height:104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-info .fa-star{
+    color: #FFC014;
+    font-size: 12px;
+}
+.course-info .fa-star.empty{
+    color:  #AEAEAE;
+}
+.course-info .course-duration{
+    background-color: #FEE5DF;
+    border-radius: 15px;
+    padding: 3px 6px;
+    color:  #FF4A60;
+}
+/* media querys responsiveness */
+/* mobile device */
+@media only screen and (max-width:767px){
+    .container{
+        width: 100%;
+    }
+    .togle-bar .fa-bars{
+        display: block;
+    }
+    .menu .sub-menu{
+        display: none;
+    }
+    .section-title{
+        text-align: center;
+    }
+    .players,.blogs,.courses{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    .course{
+        margin-top: 10px;
+    }
+    .player,.blog{
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        padding-top: 10px;
+        width: 50vw;
+        align-items: center;
+        text-align: center;
+        box-shadow: 3px 1px 8px #dddddd;
+    }
+
+}
+/* tablate devices */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .container{
+        width: 100%;
+    }
+    .players,.blogs,.courses{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        column-gap: 10px;
+    }
+    .course{
+        margin-top: 10px;
+    }
+    .player,.blog{
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        padding-top: 10px;
+        width: 50vw;
+        align-items: center;
+        text-align: center;
+        box-shadow: 3px 1px 8px #dddddd;
+    }
+}
